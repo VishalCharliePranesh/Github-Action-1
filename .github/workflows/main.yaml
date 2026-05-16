@@ -1,8 +1,13 @@
 name: hello-world
 on: push
 jobs:
-  my-job:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: my-step
-        run: echo "Hello World!"
+      - name: build
+        run: echo "build sucessfull"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test
+        run: echo "test sucessfull"
