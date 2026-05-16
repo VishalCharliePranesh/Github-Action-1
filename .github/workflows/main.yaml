@@ -1,13 +1,23 @@
 name: hello-world
 on: push
 jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: my-step
+        run: echo "Hello World!"
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: build
+      - name: my-build
         run: echo "build sucessfull"
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: test
+      - name: my-test
         run: echo "test sucessfull"
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: my-deploy
+        run: echo "deploy sucessfull"
